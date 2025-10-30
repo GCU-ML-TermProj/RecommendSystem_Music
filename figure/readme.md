@@ -2,6 +2,13 @@
 - train dataset : Official Million Song Dataset 중 2,000,000건 (노래는 10,000개)의 데이터 
 - test dataset : Million Song Dataset Challenge(https://www.kaggle.com/competitions/msdchallenge/code) 에서 제공하는 테스트 데이터셋 (실제 precision 나온거랑 다른 사람들 성능 비교해보려고 일부러 이 데이터셋을 사용)
 
+### 참고자료
+- https://www.kaggle.com/code/mayankmehra25/music-recommeder-system
+- https://www.kaggle.com/code/mpwolke/million-songs-zip-txt
+- https://www.kaggle.com/code/hellokaglle/fork-of-music-recommendation
+- https://www.kaggle.com/code/nikolayshivarov2000/collaborative-music-recommender
+- https://www.kaggle.com/code/varutriparihar/content-based-recommender-system
+
 ### 실험 환경
 - Runpod
 - 사용라이브러리 : os, sys, subprocess, warnings, numpy, pandas, time, matplotlib, sklearn, scipy, math, seaborn, surprise
@@ -70,4 +77,4 @@
 | **(33) 모델기반\_KNN그리드서치.png** | **(모델 4: 하이퍼파라미터 튜닝)** KNN 모델의 최적의 이웃 수(K)를 찾기 위한 그래프입니다. K가 증가함에 따라 RMSE(오류)가 감소하다가 50 근처에서 안정화되며, K=50이 최적의 값(성능과 속도의 균형점)임을 보여줍니다. |
 | **(34) 모델기반\_SVD++그리드서치.png** | **(모델 5: 하이퍼파라미터 튜닝)** SVD++ 모델의 최적의 잠재 요인 수(Factor)를 찾기 위한 그래프입니다. 요인 수가 40~50개를 넘어가면서 오류 감소 폭이 둔화되며, 100개에서 최상의 성능을 기록했음을 보여줍니다. |
 | **(35) 모델기반\_KNN과SVD++의RMSE분포비교.png** | **(모델 4, 5: 오류 분포 비교)** 두 모델의 예측 오류(절대 오차) 분포입니다. SVD++(녹색)의 분포가 KNN(파란색)보다 0에 더 가깝게 뾰족하며, 이는 SVD++이 **더 많은 예측을 더 정확하게(오류 0에 가깝게) 수행**했음을 의미합니다. |
-| **(36) 실제대회였으면3등이었음.png** | **(결론)** 근데, 아무리 그래도 Precision이 겨우 0.17~18밖에 안나와서 뭔가 이상해서 예전 (무려 10년보다 더 된) Kaggle Challenge의 사람들의 실제 점수를 파악했더니 우리의 성능이 꽤나 좋은 편이었던 겁니다! 이 데이터셋의 원본 대회인 "Million Song Dataset Challenge"의 실제 리더보드(순위표)입니다. 이 스크립트의 SVD++ 모델이 기록한 점수(average macro precision)는 **실제 대회에서 3위를 차지할 수 있는 매우 높은 수준**임을 보여주는, 강력한 외부 검증 자료입니다. |
+| **(36) 실제대회였으면3등이었음.png** | **(결론)** 근데, 아무리 그래도 Precision이 겨우 0.17~18밖에 안나와서 뭔가 이상해서 예전 (무려 10년보다 더 된) Kaggle Challenge의 사람들의 실제 점수를 파악했더니 우리의 성능이 꽤나 좋은 편이었던 겁니다! 이 데이터셋의 원본 대회인 "Million Song Dataset Challenge"의 실제 리더보드(순위표)입니다. 이 스크립트의 SVD++ 모델이 기록한 점수(average macro precision)는 3위 정도였습니다. |

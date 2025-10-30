@@ -3,7 +3,8 @@
 - test dataset : Million Song Dataset Challenge(https://www.kaggle.com/competitions/msdchallenge/code) 에서 제공하는 테스트 데이터셋 (실제 precision 나온거랑 다른 사람들 성능 비교해보려고 일부러 이 데이터셋을 사용)
 
 ### 실험 환경
-- Runpod 
+- Runpod
+- 사용라이브러리 : os, sys, subprocess, warnings, numpy, pandas, time, matplotlib, sklearn, scipy, math, seaborn, surprise
 
 ### 사용한 전처리 방법
 | 처리 범주 | 사용된 방법 | 목적 및 내용 |

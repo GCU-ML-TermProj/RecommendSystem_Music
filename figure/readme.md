@@ -12,6 +12,7 @@
 | **1. 데이터 정제** | `groupby().max()` | `song_id` 기준 중복 메타데이터 제거 |
 | | `pd.merge` | 청취 기록(txt)과 노래 메타데이터(csv) 병합 |
 | | `rename`, `del` | 컬럼 이름 변경 (`play_count` -> `listen_count`) 및 불필요한 컬럼 삭제 |
+| | 0년인 데이터 삭제 | 결측치 삭제 |
 | **2. 피처 엔지니어링** | 비율 계산 | `fractional_play_count` (총 청취 수 대비 개별 곡 청취 비중) 생성 |
 | | 로그 변환 (`np.log1p`) | 청취 횟수(listen_count)의 롱테일 분포를 정규화 |
 | | 스케일링 (Scaling) | 로그 변환된 값을 1~5점 척도의 `rating`으로 변환 (Surprise용) |
